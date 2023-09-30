@@ -1,7 +1,9 @@
 # TODO
 - [ ] Mostrar de los directores cuantas otras obras dirigieron
-- [ ] Mostrar de los excritores cuantas otras obras escribieron
-- [ ] Si no, ver si se puede hacer un one hot encoding de los directores y escritores
+- [x] Mostrar de los excritores cuantas otras obras escribieron
+    - Sum of expirience
+- [x] Si no, ver si se puede hacer un one hot encoding de los directores y escritores
+    - Muchos directores. Pide +1tb de ram
 - [ ] Ver si se puede hacer una columna que diga si estos escribieron antes o no
 - [ ] Paises de origen si hay
 
