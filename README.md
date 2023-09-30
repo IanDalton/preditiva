@@ -1,3 +1,10 @@
+# TODO
+- [ ] Mostrar de los directores cuantas otras obras dirigieron
+- [ ] Mostrar de los excritores cuantas otras obras escribieron
+- [ ] Si no, ver si se puede hacer un one hot encoding de los directores y escritores
+- [ ] Ver si se puede hacer una columna que diga si estos escribieron antes o no
+- [ ] Paises de origen si hay
+
 # preditiva
 Realizar una “submission” a la siguiente competencia de Kaggle:
 https://www.kaggle.com/competitions/tp2-predictivo-2023q2

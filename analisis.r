@@ -59,3 +59,14 @@ dataset %>%
 
 
 aov(titleType ~ averageRating, data = dataset) %>% summary()
+
+#Show the % of completeness of the dataset on all the columns
+dataset %>%
+    select(genres_x,directors,writers,seasonNumber,episodeNumber,ordering) %>%
+    map_df(~sum(!is.na(.x))/length(.x)) %>%
+    gather() %>%
+    ggplot(aes(x = key, y = value)) +
+    geom_bar(stat = "identity") +
+    geom_text(aes(label = scales::percent(value, accuracy = 1)), vjust = -0.5) +
+    theme_minimal() +
+    theme(text = element_text(size=20))
