@@ -4,7 +4,7 @@
     - Sum of expirience
 - [x] Si no, ver si se puede hacer un one hot encoding de los directores y escritores
     - Muchos directores. Pide +1tb de ram
-- [ ] Ver si se puede hacer una columna que diga si estos escribieron antes o no
+- [X] Ver si se puede hacer una columna que diga si estos escribieron antes o no
 - [ ] Paises de origen si hay
 
 # preditiva

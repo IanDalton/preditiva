@@ -10,9 +10,25 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
+def sum_into_column(persons,data:dict):
+    total = 0
+    for person in persons.split(","):
+        if person in data:
+            total += data[person]
+    return total
+def split_and_sum(data:dict):
+    people = dict()
+    list_of_people:str
+    for list_of_people in data.keys():
+        for person in list_of_people.split(","):
+            if person in people:
+                people[person]+=data[list_of_people]
+            else:
+                people[person]=data[list_of_people]
+    people["0"] = 0
+    return people
 
 
-df_train=pd.read_csv('dataset/origen.csv')
 
 def director_avg_rating(db):
     directors_score = dict()
@@ -31,4 +47,7 @@ def director_avg_rating(db):
     return directors_score
 
 
-score = director_avg_rating(df_train)
+if __name__ == "__main__":
+
+    df_train=pd.read_csv('dataset/origen.csv')
+    score = director_avg_rating(df_train)
