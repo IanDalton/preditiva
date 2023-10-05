@@ -1,6 +1,6 @@
 # TODO
-- [ ] Mostrar de los directores cuantas otras obras dirigieron
-- [x] Mostrar de los excritores cuantas otras obras escribieron
+- [X] Mostrar de los directores cuantas otras obras dirigieron
+- [x] Mostrar de los escritores cuantas otras obras escribieron
     - Sum of expirience
 - [x] Si no, ver si se puede hacer un one hot encoding de los directores y escritores
     - Muchos directores. Pide +1tb de ram

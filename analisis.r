@@ -62,7 +62,7 @@ aov(titleType ~ averageRating, data = dataset) %>% summary()
 
 #Show the % of completeness of the dataset on all the columns
 dataset %>%
-    select(genres_x,directors,writers,seasonNumber,episodeNumber,ordering) %>%
+    select(language,isOriginalTitle) %>%
     map_df(~sum(!is.na(.x))/length(.x)) %>%
     gather() %>%
     ggplot(aes(x = key, y = value)) +
@@ -70,3 +70,15 @@ dataset %>%
     geom_text(aes(label = scales::percent(value, accuracy = 1)), vjust = -0.5) +
     theme_minimal() +
     theme(text = element_text(size=20))
+
+dataset %>%
+  group_by(directors) %>%
+  count() %>%
+  View()
+d2 = read.csv("S:\\Github\\preditiva\\train.csv")
+
+#corr plot between all the variables
+d2 %>%
+    select(averageRating, numVotes, runtimeMinutes, isAdult, startYear,endYear,directors_exp,writers_exp) %>%
+    cor(method = "spearman") %>%
+    corrplot(type = "upper", method = "circle", tl.col = "black", tl.srt = 45)
