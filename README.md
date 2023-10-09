@@ -6,6 +6,10 @@
     - Muchos directores. Pide +1tb de ram
 - [X] Ver si se puede hacer una columna que diga si estos escribieron antes o no
 - [ ] Paises de origen si hay
+- [ ] Cuantas companias producen la pelicula
+- [ ] Experiencia de las companias
+- [ ] Paises de la pelicula
+- [ ] "Experiencia" del pais
 
 # preditiva
 Realizar una “submission” a la siguiente competencia de Kaggle:
