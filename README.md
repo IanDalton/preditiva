@@ -5,16 +5,16 @@
 - [x] Si no, ver si se puede hacer un one hot encoding de los directores y escritores
     - Muchos directores. Pide +1tb de ram
 - [X] Ver si se puede hacer una columna que diga si estos escribieron antes o no
-- [ ] Paises de origen si hay
+- [X] Paises de origen si hay
 - [ ] Cuantas companias producen la pelicula
 - [ ] Experiencia de las companias
-- [ ] Paises de la pelicula
-- [ ] "Experiencia" del pais
+- [X] Paises de la pelicula
+- [X] "Experiencia" del pais
 - [ ] Rating promedio del genero
 - [ ] Rating promedio del pais
     - Estos podrian adaptarse a cantidad por genero
 - [ ] Experiencia de directores por genero
-- [ ] Votos acumulados por director
+- [X] Votos acumulados por director
 
 
 # preditiva
