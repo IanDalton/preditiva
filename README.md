@@ -10,6 +10,12 @@
 - [ ] Experiencia de las companias
 - [ ] Paises de la pelicula
 - [ ] "Experiencia" del pais
+- [ ] Rating promedio del genero
+- [ ] Rating promedio del pais
+    - Estos podrian adaptarse a cantidad por genero
+- [ ] Experiencia de directores por genero
+- [ ] Votos acumulados por director
+
 
 # preditiva
 Realizar una “submission” a la siguiente competencia de Kaggle:
