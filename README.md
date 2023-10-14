@@ -15,6 +15,29 @@
     - Estos podrian adaptarse a cantidad por genero
 - [ ] Experiencia de directores por genero
 - [X] Votos acumulados por director
+- [] Runtime promedio de los directores
+- [] runtime total de los directores
+- [] Experiencia maxima del director mas experimentado
+- [] Experiencia minima del director menos experimentado
+- [] Corregir isAdult
+- [X] Splitear bien el train y el test
+    - Video tiene true y false. No se puede llenar de 0s
+
+# Modelos a probar
+
+- [X] Random Forest
+- [X] XGBoost
+    -[] Completar los missing with k-neareas neighbors
+    -[] Feature scaling
+    -[] Huber loss or Tukey loss
+    -[] Feature selection
+    
+- [X] LightGBM
+- [] K-nearest neighbors regression
+- [] Support Vector Machine regression
+- [] Red Neuronal regresion
+- [] K-means regression
+
 
 
 # preditiva

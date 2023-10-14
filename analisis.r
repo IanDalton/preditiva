@@ -9,6 +9,7 @@ library(scales)
 library(corrplot)
 
 dataset <- read.csv("S:\\Github\\preditiva\\dataset\\origen.csv")
+cc <- read.csv("S:\\Github\\preditiva\\dataset\\train.csv")
 
 glimpse(dataset)
 skim(dataset)

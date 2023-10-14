@@ -51,3 +51,16 @@ if __name__ == "__main__":
 
     df_train=pd.read_csv('dataset/origen.csv')
     score = director_avg_rating(df_train)
+
+
+# Funcion que recibe una lista y devuelve dos listas, una par y otra inpar
+
+def split_list(lista):
+    lista_par = []
+    lista_inpar = []
+    for i in range(len(lista)):
+        if i % 2 == 0:
+            lista_par.append(lista[i])
+        else:
+            lista_inpar.append(lista[i])
+    return lista_par, lista_inpar
