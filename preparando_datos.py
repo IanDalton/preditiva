@@ -12,11 +12,12 @@ import matplotlib.pyplot as plt
 
 def sum_into_column(persons,data:dict):
     total = 0
+    personas = len(persons.split(","))
     for person in persons.split(","):
         if person in data:
             total += data[person]
+    return total/personas
 
-    return total
 def split_and_sum(data:dict):
     people = dict()
     list_of_people:str

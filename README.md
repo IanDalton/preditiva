@@ -2,18 +2,19 @@
 - [X] Mostrar de los directores cuantas otras obras dirigieron
 - [x] Mostrar de los escritores cuantas otras obras escribieron
     - [] Sum of expirience
-    - [] avg of experience
+    - [X] avg of experience
 - [x] Si no, ver si se puede hacer un one hot encoding de los directores y escritores
     - Muchos directores. Pide +1tb de ram
 - [X] Ver si se puede hacer una columna que diga si estos escribieron antes o no
 - [X] Paises de origen si hay
-- [ ] Cuantas companias producen la pelicula
-- [ ] Experiencia de las companias
+- [X] Cuantas companias producen la pelicula
+- [X] Experiencia de las companias
 - [X] Paises de la pelicula
 - [X] "Experiencia" del pais
 - [ ] Rating promedio del genero
 - [ ] Rating promedio del pais
     - Estos podrian adaptarse a cantidad por genero
+    - Mas que rating podria ser 
 - [ ] Experiencia de directores por genero
 - [X] Votos acumulados por director
 - [] Runtime promedio de los directores
@@ -28,7 +29,8 @@
 
 # Modelos a probar
 
-- [] Auto-sklearn
+- [X] Auto-sklearn
+    - Esta roto
 - [X] Random Forest
 - [X] XGBoost
     -[] Completar los missing with k-neareas neighbors
@@ -36,11 +38,15 @@
     -[] Huber loss or Tukey loss
     -[] Feature selection
     
-- [X] LightGBM
-- [] K-nearest neighbors regression
-- [] Support Vector Machine regression
+- [] LightGBM
+    - Esta bueno, experimentar un poco mas
+- [X] K-nearest neighbors regression
+    - Malo 
+- [X] Support Vector Machine regression
+    - Lentisimo 
 - [] Red Neuronal regresion
-- [] K-means regression
+- [X] K-means regression
+    - Malo 
 
 
 
