@@ -1,7 +1,8 @@
 # TODO
 - [X] Mostrar de los directores cuantas otras obras dirigieron
 - [x] Mostrar de los escritores cuantas otras obras escribieron
-    - Sum of expirience
+    - [] Sum of expirience
+    - [] avg of experience
 - [x] Si no, ver si se puede hacer un one hot encoding de los directores y escritores
     - Muchos directores. Pide +1tb de ram
 - [X] Ver si se puede hacer una columna que diga si estos escribieron antes o no
@@ -17,14 +18,17 @@
 - [X] Votos acumulados por director
 - [] Runtime promedio de los directores
 - [] runtime total de los directores
-- [] Experiencia maxima del director mas experimentado
-- [] Experiencia minima del director menos experimentado
-- [] Corregir isAdult
+- [X] Experiencia maxima del director mas experimentado
+- [X] Experiencia minima del director menos experimentado
+- [X] Corregir isAdult
 - [X] Splitear bien el train y el test
     - Video tiene true y false. No se puede llenar de 0s
+- [X] Promediar columnas
+
 
 # Modelos a probar
 
+- [] Auto-sklearn
 - [X] Random Forest
 - [X] XGBoost
     -[] Completar los missing with k-neareas neighbors

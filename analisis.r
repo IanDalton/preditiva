@@ -10,6 +10,28 @@ library(corrplot)
 
 dataset <- read.csv("S:\\Github\\preditiva\\dataset\\origen.csv")
 cc <- read.csv("S:\\Github\\preditiva\\dataset\\train.csv")
+dataset %>%
+  select(runtimeMinutes,titleType) %>%
+  View()
+
+cc %>%
+    select(averageRating, numVotes, runtimeMinutes, isAdult, startYear,endYear,directors_exp,writers_exp) %>%
+  cor(method = "spearman") %>%
+  corrplot(type = "upper", method = "circle", tl.col = "black", tl.srt = 45)
+# Calculate the correlation between each column and averageRating
+correlations <- sapply(cc, function(x) cor(x, cc$averageRating, method = "spearman"))
+
+# Create a data frame with the results
+results <- data.frame(variable = names(cc), correlation = correlations)
+
+# Print the results
+print(results)
+
+
+dataset %>%
+  group_by(titleType)%>%
+  n()%>%
+  View()
 
 glimpse(dataset)
 skim(dataset)
@@ -25,7 +47,7 @@ ggplot(dataset, aes(x = averageRating)) +
 # finding the correlation of averageRating and the rest of the variables
 
 dataset %>%
-    select(averageRating, numVotes, runtimeMinutes, isAdult, startYear,endYear) %>%
+    select(averageRating, numVotes, runtimeMinutes, startYear,endYear,revenue) %>%
     cor(method = "spearman") %>%
     corrplot(type = "upper", method = "circle", tl.col = "black", tl.srt = 45)
 
@@ -80,6 +102,6 @@ d2 = read.csv("S:\\Github\\preditiva\\train.csv")
 
 #corr plot between all the variables
 d2 %>%
-    select(averageRating, numVotes, runtimeMinutes, isAdult, startYear,endYear,directors_exp,writers_exp) %>%
+    select(averageRating, numVotes, runtimeMinutes, isAdult, startYear,endYear,directors_exp,writers_exp,revenue) %>%
     cor(method = "spearman") %>%
     corrplot(type = "upper", method = "circle", tl.col = "black", tl.srt = 45)

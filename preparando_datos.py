@@ -15,6 +15,7 @@ def sum_into_column(persons,data:dict):
     for person in persons.split(","):
         if person in data:
             total += data[person]
+
     return total
 def split_and_sum(data:dict):
     people = dict()
@@ -27,6 +28,18 @@ def split_and_sum(data:dict):
                 people[person]=data[list_of_people]
     people["0"] = 0
     return people
+
+def get_min_max(persons,data:dict,is_max:bool):
+    min_max = 0 if is_max else 999999999999
+    for person in persons.split(','):
+        if is_max:
+            if data[person] > min_max:
+                min_max = data[person]
+        else:
+            if data[person] < min_max:
+                min_max = data[person]
+
+    return min_max
 
 
 
@@ -48,9 +61,9 @@ def director_avg_rating(db):
 
 
 if __name__ == "__main__":
-
+    """ 
     df_train=pd.read_csv('dataset/origen.csv')
-    score = director_avg_rating(df_train)
+    score = director_avg_rating(df_train) """
 
 
 # Funcion que recibe una lista y devuelve dos listas, una par y otra inpar
