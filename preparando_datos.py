@@ -10,12 +10,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-def sum_into_column(persons,data:dict):
+def sum_into_column(persons,data:dict,category:str=None):
     total = 0
     personas = len(persons.split(","))
     for person in persons.split(","):
         if person in data:
-            total += data[person]
+            total += data[person] if category is None else data[person][category]
     return total/personas
 
 def split_and_sum(data:dict):
@@ -33,12 +33,15 @@ def split_and_sum(data:dict):
 def get_min_max(persons,data:dict,is_max:bool):
     min_max = 0 if is_max else 999999999999
     for person in persons.split(','):
-        if is_max:
-            if data[person] > min_max:
-                min_max = data[person]
-        else:
-            if data[person] < min_max:
-                min_max = data[person]
+        try:
+            if is_max:
+                if data[person] > min_max:
+                    min_max = data[person]
+            else:
+                if data[person] < min_max:
+                    min_max = data[person]
+        except KeyError:
+            pass
 
     return min_max
 
@@ -60,21 +63,3 @@ def director_avg_rating(db):
         directors_score[director] = directors_score[director][0] / directors_score[director][1]
     return directors_score
 
-
-if __name__ == "__main__":
-    """ 
-    df_train=pd.read_csv('dataset/origen.csv')
-    score = director_avg_rating(df_train) """
-
-
-# Funcion que recibe una lista y devuelve dos listas, una par y otra inpar
-
-def split_list(lista):
-    lista_par = []
-    lista_inpar = []
-    for i in range(len(lista)):
-        if i % 2 == 0:
-            lista_par.append(lista[i])
-        else:
-            lista_inpar.append(lista[i])
-    return lista_par, lista_inpar
