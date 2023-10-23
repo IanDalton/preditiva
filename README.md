@@ -25,6 +25,8 @@
 - [X] Splitear bien el train y el test
     - Video tiene true y false. No se puede llenar de 0s
 - [X] Promediar columnas
+- [] Desvio standard de las cosas
+- [] Mediana de las cosas
 
 
 # Modelos a probar
