@@ -27,7 +27,16 @@
 - [X] Promediar columnas
 - [] Desvio standard de las cosas
 - [] Mediana de las cosas
+- [] Indicador de datos faltantes
+- [] EndTailImputer
+- [] RareLabelEncoder
+- [] Leer feature-engine encoding
+- [] Transformaciones
+- [] Ver de implementar el pipeline. scikit learn
+    - Developing scikit learn estimators
+- [] OOB predictions
 
+ 
 
 # Modelos a probar
 
