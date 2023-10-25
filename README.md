@@ -34,7 +34,8 @@
 - [] Transformaciones
 - [] Ver de implementar el pipeline. scikit learn
     - Developing scikit learn estimators
-- [] OOB predictions
+- [X] OOB predictions
+    - Es solo para random forest
 
  
 

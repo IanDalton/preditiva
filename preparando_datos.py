@@ -9,6 +9,12 @@ from concurrent.futures import ThreadPoolExecutor
 import pandas as pd
 import matplotlib.pyplot as plt
 
+def compute_average(values):
+        if values[0] == values[1]:
+            return values[0]
+        if values[1] != 0:
+            return values[0] / values[1]
+        return 0
 
 def sum_into_column(persons,data:dict,category:str=None):
     total = 0
