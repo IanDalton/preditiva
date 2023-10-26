@@ -31,8 +31,8 @@
 - [] EndTailImputer
 - [] RareLabelEncoder
 - [] Leer feature-engine encoding
-- [] Transformaciones
-- [] Ver de implementar el pipeline. scikit learn
+- [X] Transformaciones
+- [X] Ver de implementar el pipeline. scikit learn
     - Developing scikit learn estimators
 - [X] OOB predictions
     - Es solo para random forest

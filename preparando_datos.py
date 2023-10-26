@@ -36,20 +36,40 @@ def split_and_sum(data:dict):
     people["0"] = 0
     return people
 
-def get_min_max(persons,data:dict,is_max:bool):
+def get_min_max_category(persons,data:dict,is_max:bool,categories:list):
     min_max = 0 if is_max else 999999999999
+
     for person in persons.split(','):
-        try:
-            if is_max:
-                if data[person] > min_max:
-                    min_max = data[person]
-            else:
-                if data[person] < min_max:
-                    min_max = data[person]
-        except KeyError:
-            pass
+        for category in categories:
+            try:
+                if is_max:
+                    if data[person][category] > min_max:
+                        min_max = data[person][category]
+                else:
+                    if data[person][category] < min_max and data[person][category] != 0:
+                        min_max = data[person][category]
+            except KeyError:
+                pass
 
     return min_max
+def get_min_max(persons,data:dict,is_max:bool,category:str=None):
+    min_max = 0 if is_max else 999999999999
+    if category is not None and category is not 'exp':
+        min_max = get_min_max_category(persons,data,is_max,category)
+        
+    else:
+        for person in persons.split(','):
+            try:
+                if is_max:
+                    if data[person] > min_max:
+                        min_max = data[person]
+                else:
+                    if data[person] < min_max:
+                        min_max = data[person]
+            except KeyError:
+                pass
+
+    return min_max if min_max != 999999999999 else 0
 
 
 
