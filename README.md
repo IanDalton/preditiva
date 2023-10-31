@@ -36,6 +36,7 @@
     - Developing scikit learn estimators
 - [X] OOB predictions
     - Es solo para random forest
+- [] Antiguedad
 
  
 
