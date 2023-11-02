@@ -6,6 +6,6 @@ def install_packages(packages):
         subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 # List of packages to install
-packages = ["linear-tree"]
+packages = ["linear-tree",'xgboost','pandas','matplotlib','feature_engine']
 
 install_packages(packages)

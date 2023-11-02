@@ -37,6 +37,8 @@
 - [X] OOB predictions
     - Es solo para random forest
 - [] Antiguedad
+- [] Terminar de adaptar todo a pipeline
+- [] Reducir el nro de columnas
 
  
 
