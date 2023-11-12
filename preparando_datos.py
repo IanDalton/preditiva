@@ -19,10 +19,37 @@ def compute_average(values):
 def sum_into_column(persons,data:dict,category:str=None):
     total = 0
     personas = len(persons.split(","))
-    for person in persons.split(","):
-        if person in data:
-            total += data[person] if category is None else data[person][category]
+    if category != 'total':
+        for person in persons.split(","):
+            if person in data:
+                total += data[person] if category is None else data[person][category]
+    else:
+        for person in persons.split(","):
+            score_divider = 0
+            score_persona = 0
+            if person in data:
+                data[person]:dict
+                for cat in data[person].values():
+                    score_persona += cat
+                    if cat != 0:
+                        score_divider += 1
+            total += score_persona / score_divider if score_divider != 0 else 0
     return total/personas
+
+def sum_relevant_exp(persons:pd.DataFrame,data:dict,group:str,target:str):
+    total = 0
+    personas = persons[group].split(",")
+    relevant_cat = persons[target]
+    for person in personas:
+        total_person,total_cat = 0,0
+        if type(relevant_cat)==str:   
+            for cat in relevant_cat.split(","):
+                if person in data:
+                    total_person += data[person][cat]
+                    total_cat += 1 if data[person][cat] != 0 else 0
+        total += total_person / total_cat if total_cat != 0 else 0
+    return total/len(personas)
+
 
 def split_and_sum(data:dict):
     people = dict()
@@ -54,9 +81,11 @@ def get_min_max_category(persons,data:dict,is_max:bool,categories:list):
     return min_max
 def get_min_max(persons,data:dict,is_max:bool,category:str=None):
     min_max = 0 if is_max else 999999999999
-    if category is not None and category is not 'exp':
-        min_max = get_min_max_category(persons,data,is_max,category)
-        
+    #print(persons)
+    if persons == '' or persons is None or persons == '0':
+        return 0
+    if category != None and category != 'exp':
+        min_max = get_min_max_category(persons,data,is_max,category)  
     else:
         for person in persons.split(','):
             try:

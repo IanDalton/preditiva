@@ -8,7 +8,12 @@ library(glue)
 library(scales)
 library(corrplot)
 
-dataset <- read.csv("S:\\Github\\preditiva\\dataset\\origen.csv")
+dataset <- read.csv("S:\\Github\\preditiva\\dataset\\transformedd.csv")
+
+cc = dataset
+
+
+#dataset2 <- read.csv("S:\\Github\\preditiva\\dataset\\transformedd.csv")
 cc <- read.csv("S:\\Github\\preditiva\\dataset\\train.csv")
 dataset %>%
   select(runtimeMinutes,titleType) %>%
