@@ -17,8 +17,9 @@
     - Mas que rating podria ser 
 - [ ] Experiencia de directores por genero
 - [X] Votos acumulados por director
-- [] Runtime promedio de los directores
-- [] runtime total de los directores
+- [X] Runtime promedio de los directores
+- [X] runtime total de los directores
+    - Se uso el promedio
 - [X] Experiencia maxima del director mas experimentado
 - [X] Experiencia minima del director menos experimentado
 - [X] Corregir isAdult
@@ -29,7 +30,8 @@
 - [] Mediana de las cosas
 - [] Indicador de datos faltantes
 - [] EndTailImputer
-- [] RareLabelEncoder
+- [X] RareLabelEncoder
+    - No sumo, tener en cuenta para optimizar memoria
 - [] Leer feature-engine encoding
 - [X] Transformaciones
 - [X] Ver de implementar el pipeline. scikit learn
@@ -59,7 +61,7 @@
     - Malo 
 - [X] Support Vector Machine regression
     - Lentisimo 
-- [] Red Neuronal regresion
+- [X] Red Neuronal regresion
 - [X] K-means regression
     - Malo 
 
